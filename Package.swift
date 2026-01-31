@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "RNDeviceName",
+    name: "iOSDevice",
     platforms: [.iOS(.v14),
                 .tvOS(.v14)],
     products: [
         .library(
-            name: "RNDeviceName",
-            targets: ["RNDeviceName"]),
+            name: "iOSDevice",
+            targets: ["iOSDevice"]),
     ],
     targets: [
         .target(
-            name: "RNDeviceName",
+            name: "iOSDevice",
             dependencies: [],
             path: "Sources"),
         .testTarget(
-            name: "RNDeviceNameTests",
-            dependencies: ["RNDeviceName"],
+            name: "iOSDeviceTests",
+            dependencies: ["iOSDevice"],
             path: "Tests"),
     ],
     swiftLanguageModes: [.v6]

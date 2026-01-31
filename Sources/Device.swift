@@ -22,6 +22,11 @@ public struct Device {
     private var model: any DeviceType {
         return self.deviceFromIdentifier(self.identifier)
     }
+    
+    var diagonalSize: CGFloat {
+        Device.diagonalSize(self.identifier)
+    }
+    
 }
 
 extension Device {
@@ -70,7 +75,16 @@ extension Device {
         
         return device
     }
+    
+    static func diagonalSize(_ identifier: String) -> CGFloat {
+        return self.families.firstMap { family in
+            family.devices.first(where: { device in
+                device.identifiers.contains(where: { $0 == identifier })
+            })
+        }?.type.diagonalSize ?? 0
+    }
 }
+
 
 
 // MARK: - Array
@@ -96,4 +110,3 @@ extension Array {
         }
     }
 }
-

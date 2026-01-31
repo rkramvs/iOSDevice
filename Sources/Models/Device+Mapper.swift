@@ -94,6 +94,7 @@ extension Device.AppleTV: DeviceFamily {
 }
 
 
+// https://appledb.dev/device-selection/iPads.html
 // MARK: - iPad
 
 extension Device.iPad: DeviceFamily {
@@ -107,7 +108,9 @@ extension Device.iPad: DeviceFamily {
          (.iPad7, ["iPad7,11", "iPad7,12"]),
          (.iPad8, ["iPad11,6", "iPad11,7"]),
          (.iPad9, ["iPad12,1", "iPad12,2"]),
-         (.iPad10, ["iPad13,18", "iPad13,19"])]
+         (.iPad10, ["iPad13,18", "iPad13,19"]),
+         (.iPadA16, ["iPad15,7", "iPad15,8"])
+        ]
     }
 }
 
@@ -117,7 +120,12 @@ extension Device.iPadAir: DeviceFamily {
          (.iPadAir2, ["iPad5,3", "iPad5,4"]),
          (.iPadAir3, ["iPad11,3", "iPad11,4"]),
          (.iPadAir4, ["iPad13,1", "iPad13,2"]),
-         (.iPadAir5, ["iPad13,16", "iPad13,17"])]
+         (.iPadAir5, ["iPad13,16", "iPad13,17"]),
+         (.iPadAir6Inch11M2, ["iPad14,8", "iPad14,9"]),
+         (.iPadAir6Inch13M2, ["iPad14,10", "iPad14,11"]),
+         (.iPadAir6Inch11M3, ["iPad15,3", "iPad15,4"]),
+         (.iPadAir6Inch13M3, ["iPad15,5", "iPad15,6"])
+        ]
     }
 }
 
@@ -128,7 +136,9 @@ extension Device.iPadMini: DeviceFamily {
          (.iPadMini3, ["iPad4,7", "iPad4,8", "iPad4,9"]),
          (.iPadMini4, ["iPad5,1", "iPad5,2"]),
          (.iPadMini5, ["iPad11,1", "iPad11,2"]),
-         (.iPadMini6, ["iPad14,1", "iPad14,2"])]
+         (.iPadMini6, ["iPad14,1", "iPad14,2"]),
+         (.iPadMiniA17Pro, ["iPad16,1", "iPad16,2"])
+        ]
     }
 }
 
@@ -146,9 +156,14 @@ extension Device.iPadPro: DeviceFamily {
          (.iPadPro12Inch5, ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]),
          (.iPadPro11Inch4, ["iPad14,3", "iPad14,4"]),
          (.iPadPro12Inch6, ["iPad14,5", "iPad14,6"]),
-         (.iPadPro11InchM2, ["iPad14,8", "iPad14,9"]),
          (.iPadPro11InchM4, ["iPad16,3-A", "iPad16,3-B", "iPad16,4-A", "iPad16,4-B"]),
-         (.iPadPro13InchM4, ["iPad16,5-A", "iPad16,5-B", "iPad16,6-A", "iPad16,6-B"])]
+         (.iPadPro13InchM4, ["iPad16,5-A", "iPad16,5-B", "iPad16,6-A", "iPad16,6-B"]),
+         
+         (.iPadPro11InchM4, ["iPad16,3", "iPad16,4"]),
+         (.iPadPro13InchM4, ["iPad16,5", "iPad16,6"]),
+         (.iPadPro11InchM5, ["iPad17,1", "iPad17,2"]),
+         (.iPadPro13InchM5, ["iPad17,3", "iPad17,4"])
+        ]
     }
 }
 

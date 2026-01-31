@@ -6,7 +6,7 @@
 
 import Foundation
 
-protocol DeviceType: Equatable {
+protocol DeviceType: Equatable, DiagonalSize {
     var marketingName: String { get }
 }
 

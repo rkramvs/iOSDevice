@@ -1,5 +1,5 @@
 import Testing
-@testable import RNDeviceName
+@testable import iOSDevice
 
 @Suite("iPhone model tests") struct iPhoneFamilyTests {
     
