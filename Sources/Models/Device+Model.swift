@@ -14,6 +14,13 @@ extension Device {
     
     enum iPod : String, DeviceType {
         case iPod7 = "iPod touch (7th generation)"
+        
+        var diagonalSize: CGFloat {
+            switch self {
+            case .iPod7:
+                return 4.0
+            }
+        }
     }
     
     
@@ -242,6 +249,12 @@ extension Device {
         case appleTV_4K         = "Apple TV 4K (1st generation)"
         case appleTV2_4K        = "Apple TV 4K (2nd generation)"
         case appleTV3_4K        = "Apple TV 4K (3rd generation)"
+        
+        var diagonalSize: CGFloat {
+            // Apple TV doesn't have a meaningful diagonal size for displays
+            // since it outputs to external displays
+            return 0
+        }
     }
     
     
@@ -260,11 +273,17 @@ extension Device {
             }
         }
         
+        var diagonalSize: CGFloat {
+            // Unknown devices don't have a meaningful diagonal size
+            return 0
+        }
+        
         static func == (lhs: Default, rhs: Default) -> Bool {
             return lhs.marketingName == rhs.marketingName
         }
     }
     
+    @MainActor
     static var width: CGFloat {
         let bounds = UIScreen.main.bounds
         let width = min(bounds.width, bounds.height)
