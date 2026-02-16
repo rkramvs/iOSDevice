@@ -23,7 +23,7 @@ public struct Device {
         return self.deviceFromIdentifier(self.identifier)
     }
     
-    var diagonalSize: CGFloat {
+    private var diagonalSize: CGFloat {
         Device.diagonalSize(self.identifier)
     }
     
