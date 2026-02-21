@@ -274,8 +274,11 @@ extension Device {
         }
         
         var diagonalSize: CGFloat {
-            // Unknown devices don't have a meaningful diagonal size
-            return 0
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                return 6.3
+            } else {
+                return 13
+            }
         }
         
         static func == (lhs: Default, rhs: Default) -> Bool {
