@@ -24,8 +24,7 @@ public struct Device {
     }
     
     public var diagonalSize: CGFloat {
-        let resolved = self.deviceFromIdentifier(self.identifier)
-        return resolved.diagonalSize
+        Device.diagonalSize(self.identifier)
     }
     
 }
