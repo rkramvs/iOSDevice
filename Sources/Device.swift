@@ -7,26 +7,30 @@
 import Foundation
 
 public struct Device {
-    
+
     /// Returns the current device.
     public static var current: Device {
         return Device(identifier: Device.identifier)
     }
-    
+
     /// Gets the identifier from the system, such as "iPhone14,4".
     public var identifier: String
-    
+
+    public init(identifier: String) {
+        self.identifier = identifier
+    }
+
     /// Gets the marketing name from device, such as "iPhone 13 mini".
     public var marketingName: String { self.model.marketingName }
-    
+
     private var model: any DeviceType {
         return self.deviceFromIdentifier(self.identifier)
     }
-    
+
     public var diagonalSize: CGFloat {
-        Device.diagonalSize(self.identifier)
+        self.model.diagonalSize
     }
-    
+
 }
 
 extension Device {
